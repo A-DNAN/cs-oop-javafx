@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<BorderPane prefHeight="339.0" prefWidth="472.0" style="-fx-background-color: #303138;" stylesheets="@../css/mainCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AddHallController">
+   <center>
+      <AnchorPane prefHeight="309.0" prefWidth="472.0" style="-fx-background-color: #303138;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="168.0" layoutY="218.0" mnemonicParsing="false" onAction="#saveIt" prefHeight="34.0" prefWidth="137.0" styleClass="button_1" text="Save Changes">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="hallNameTF" layoutX="124.0" layoutY="100.0" prefHeight="31.0" prefWidth="225.0" promptText="Hall Name">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <CheckComboBox fx:id="availibilityCCB" layoutX="124.0" layoutY="153.0" prefHeight="33.0" prefWidth="225.0" title="Select Availability ">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckComboBox>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

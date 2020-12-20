@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="560.0" prefWidth="800.0" style="-fx-background-color: #303138;" stylesheets="@../css/mainCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SignUpController">
+   <left>
+      <AnchorPane prefHeight="480.0" prefWidth="304.0" styleClass="leftSide" stylesheets="@../css/mainCss.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="iView" fitHeight="183.0" fitWidth="230.0" layoutX="61.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/gym.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect></ImageView>
+            <ImageView fx:id="backIV" fitHeight="28.0" fitWidth="25.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="6.0" radius="2.5" width="6.0" />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow color="#16bf9f" />
+         </effect></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="8.0" styleClass="leftSide" stylesheets="@../css/mainCss.css" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+   </right>
+   <center>
+      <GridPane prefHeight="425.0" prefWidth="488.0" styleClass="center" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="286.0" minHeight="0.0" prefHeight="112.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="7">
+               <children>
+                  <Button fx:id="signUbBT" layoutX="122.0" layoutY="14.0" mnemonicParsing="false" onAction="#signUp" prefHeight="37.0" prefWidth="245.0" styleClass="button_1" text="Sign up">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <TextField fx:id="firstNameTF" prefHeight="19.0" prefWidth="288.0" promptText="First Name" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="90.0" right="90.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="lastNameTF" prefHeight="19.0" prefWidth="288.0" promptText="Last Name" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets left="90.0" right="90.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="emailTF" prefHeight="19.0" prefWidth="288.0" promptText="Email" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets left="90.0" right="90.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="phoneNumberTF" prefHeight="19.0" prefWidth="288.0" promptText="Phone Number" GridPane.rowIndex="4">
+               <effect>
+                  <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets left="90.0" right="90.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="usernameTF" prefHeight="19.0" prefWidth="288.0" promptText="Username" GridPane.rowIndex="5">
+               <effect>
+                  <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+               <GridPane.margin>
+                  <Insets left="90.0" right="90.0" />
+               </GridPane.margin>
+            </TextField>
+            <PasswordField fx:id="passwordTF" prefHeight="34.0" prefWidth="288.0" promptText="Password" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="90.0" right="90.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </PasswordField>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

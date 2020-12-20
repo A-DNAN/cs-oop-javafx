@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<BorderPane prefHeight="576.0" prefWidth="654.0" style="-fx-background-color: #303138;" stylesheets="@../css/mainCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.EditProfileController">
+   <top>
+      <AnchorPane prefHeight="579.0" prefWidth="654.0" style="-fx-background-color: #303138;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="firstNameTF" layoutX="208.0" layoutY="75.0" prefHeight="31.0" prefWidth="225.0" promptText="First Name">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="lastNameTF" layoutX="208.0" layoutY="120.0" prefHeight="39.0" prefWidth="225.0" promptText="Last Name">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="emailTF" layoutX="208.0" layoutY="165.0" prefHeight="31.0" prefWidth="225.0" promptText="Email">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="passwordTF" layoutX="208.0" layoutY="211.0" prefHeight="39.0" prefWidth="225.0" promptText="New Passowrd" />
+            <TextField fx:id="numberTF" layoutX="208.0" layoutY="257.0" prefHeight="31.0" prefWidth="225.0" promptText="Phone Number">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <TextArea fx:id="descriptionTF" layoutX="161.0" layoutY="308.0" prefHeight="188.0" prefWidth="319.0" promptText="About Me">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextArea>
+            <CheckComboBox fx:id="availabilityCCB" layoutX="208.0" layoutY="33.0" prefHeight="34.0" prefWidth="225.0" showCheckedCount="true" style="-fx-: white;" title="Select Availability">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckComboBox>
+            <Button layoutX="252.0" layoutY="514.0" mnemonicParsing="false" onAction="#save" prefHeight="34.0" prefWidth="137.0" styleClass="button_1" text="Save Changes">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="560.0" prefWidth="800.0" stylesheets="@../css/mainCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
+   <left>
+      <AnchorPane prefHeight="480.0" prefWidth="304.0" styleClass="leftSide" stylesheets="@../css/mainCss.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="iView" fitHeight="183.0" fitWidth="230.0" layoutX="61.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/gym.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect></ImageView>
+         </children>
+         <effect>
+            <DropShadow color="#16bf9f" />
+         </effect></AnchorPane>
+   </left>
+   <center>
+      <GridPane prefHeight="480.0" prefWidth="528.0" styleClass="center" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="331.0" minHeight="10.0" prefHeight="290.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="236.0" minHeight="10.0" prefHeight="109.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="265.0" prefWidth="488.0" styleClass="center" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#signIn" prefHeight="37.0" prefWidth="126.0" styleClass="button_1" text="Sign in" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" onMouseClicked="#signUp" prefHeight="27.0" prefWidth="68.0" text="Sign up" textFill="#0abc87" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="250.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTF" prefHeight="48.0" prefWidth="288.0" promptText="Username">
+                     <GridPane.margin>
+                        <Insets left="80.0" right="80.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </TextField>
+                  <PasswordField fx:id="passwordTF" prefHeight="46.0" prefWidth="288.0" promptText="Password" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="80.0" right="80.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+                     </effect>
+                  </PasswordField>
+               </children>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <effect>
+            <DropShadow color="#16bf9f" />
+         </effect>
+      </GridPane>
+   </center>
+   <right>
+      <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="8.0" styleClass="leftSide" stylesheets="@../css/mainCss.css" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
+   </right>
+</BorderPane>

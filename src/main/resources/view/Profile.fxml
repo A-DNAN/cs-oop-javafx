@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="560.0" prefWidth="740.0" style="-fx-background-color: #303138;" stylesheets="@../css/mainCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ProfileController">
+   <top>
+      <AnchorPane prefHeight="164.0" prefWidth="731.0" style="-fx-background-color: #303138; -fx-background-radius: 10px; -fx-border-radius: 10px;" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="162.0" prefWidth="731.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="135.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="493.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="97.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+            <ImageView fitHeight="135.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+                     <effect>
+                        <DropShadow height="15.0" radius="7.0" width="15.0" />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+            </ImageView>
+                  <Pane prefHeight="162.0" prefWidth="500.0" GridPane.columnIndex="1">
+                     <children>
+                  <Label fx:id="profileFullName" layoutX="14.0" layoutY="49.0" prefHeight="35.0" prefWidth="231.0" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                           <effect>
+                              <DropShadow height="15.0" radius="7.0" width="15.0" />
+                           </effect>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                  </Label>
+                  <Label fx:id="profileUsername" layoutX="36.0" layoutY="81.0" prefHeight="19.0" prefWidth="182.0" text="username : " textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="162.0" prefWidth="96.0" GridPane.columnIndex="2">
+                     <children>
+                        <Label fx:id="profileFlag" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="19.0" prefHeight="29.0" prefWidth="81.0" styleClass="flag" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <AnchorPane prefHeight="409.0" prefWidth="199.0" style="-fx-background-color: #303138;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="editProfileButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="6.0" mnemonicParsing="false" onAction="#editProfile" prefHeight="30.0" prefWidth="179.0" styleClass="button_1" text="EDIT PROFILE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Button>
+            <Button fx:id="reviewBN" alignment="BASELINE_LEFT" layoutX="20.0" layoutY="64.0" mnemonicParsing="false" onAction="#openReviewFXML" prefHeight="40.0" prefWidth="160.0" styleClass="button_3" text="Review" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/review.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <TabPane fx:id="profileTabPane" prefHeight="396.0" prefWidth="515.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab text="About">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="359.0" prefWidth="453.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" layoutY="3.0" prefHeight="355.0" prefWidth="477.0">
+                           <content>
+                              <TextArea fx:id="descriptionFD" editable="false" prefHeight="344.0" prefWidth="472.0">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </TextArea>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Video">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="361.0" prefWidth="499.0">
+                     <children>
+                        <MediaView fx:id="videoMV" fitHeight="300.0" fitWidth="510.0" layoutX="6.0" layoutY="14.0" onMouseClicked="#playOrStop">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <effect>
+                              <DropShadow color="#16bf9f" height="15.0" radius="7.0" width="15.0" />
+                           </effect>
+                        </MediaView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pictures">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="359.0" prefWidth="485.0">
+                     <children>
+                        <ScrollPane layoutX="8.0" layoutY="3.0" prefHeight="356.0" prefWidth="477.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="481.0" />
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" top="2.0" />
+         </padding>
+      </TabPane>
+   </center>
+</BorderPane>

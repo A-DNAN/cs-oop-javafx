@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<BorderPane prefHeight="446.0" prefWidth="472.0" style="-fx-background-color: #303138;" stylesheets="@../css/mainCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AssignDietController">
+   <center>
+      <AnchorPane prefHeight="309.0" prefWidth="472.0" style="-fx-background-color: #303138;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="168.0" layoutY="375.0" mnemonicParsing="false" onAction="#saveIt" prefHeight="34.0" prefWidth="137.0" styleClass="button_1" text="Save Changes">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="dietTypeTF" layoutX="124.0" layoutY="48.0" prefHeight="31.0" prefWidth="225.0" promptText="Diet Type">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+              <TextArea fx:id="descriptionTA" layoutX="77.0" layoutY="159.0" prefHeight="188.0" prefWidth="319.0" promptText="Description">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextArea>
+            <CheckComboBox fx:id="customerCCB" layoutX="124.0" layoutY="105.0" prefHeight="33.0" prefWidth="225.0" showCheckedCount="true" title="Select Customer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </CheckComboBox>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="cs-oop-project-javafx">
+	<class>application.bean.AvailabilityTimetable</class>
+	<class>application.bean.Customer</class>
+	<class>application.bean.Diet</class>
+	<class>application.bean.Equipment</class>
+	<class>application.bean.Exercice</class>
+	<class>application.bean.ExercicePlan</class>
+	<class>application.bean.Feedback</class>
+	<class>application.bean.Hall</class>
+	<class>application.bean.Manager</class>
+	<class>application.bean.Membership</class>
+	<class>application.bean.Notification</class>
+	<class>application.bean.Picture</class>
+	<class>application.bean.Profile</class>
+	<class>application.bean.ProfileData</class>
+	<class>application.bean.Review</class>
+	<class>application.bean.Statistic</class>
+	<class>application.bean.Subscription</class>
+	<class>application.bean.Trainer</class>
+	<class>application.bean.User</class>
+	 <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cs-oop-javafx?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,123 @@
+/* Java FX - CSS */
+.leftSide{
+	-fx-background-color:#16BF9F;
+/* 	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 3,0,0,0);*/
+}
+.center{
+	-fx-background-color:#303138;
+}
+/* 
+.head-background
+{
+    -fx-background-color: linear-gradient(to left,#795AF3 ,#16BF9F);
+}
+*/
+
+.combo-box{
+		-fx-background-color:white;
+		 -fx-font-weight: bold;	
+}
+.combo-box .list-cell:hover{
+		-fx-background-color:#16BF9F;
+		-fx-font-weight: bold;	
+		-fx-cursor: hand;
+}
+.table-view .column-header{
+	-fx-background-color:white;
+}
+/*.table-view {
+	-fx-background-color:#303138;
+}*/
+
+.xs{
+	-fx-background-color:#303138;
+	-fx-background-fills:#303138;
+}
+
+.menuItemX{
+	-fx-font-size: 14pt;
+	-fx-cursor: hand;
+	-fx-font-weight: bold;
+}
+
+.button_1 {
+    -fx-text-fill: white;
+    -fx-background-color: #16BF9F;
+    -fx-cursor: hand;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+   /*  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 3,0,0,0);*/
+}
+.button_2 {
+    -fx-text-fill: white;
+    -fx-background-color: #B1E9DF;
+    -fx-cursor: hand;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+  /*  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 3,0,0,0);*/
+}
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-text-fill: white;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: #303138;
+   /* -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 3,0,0,0); */
+    -fx-border-color: #16BF9F;
+}
+
+.button_3{
+	 -fx-text-fill: white;
+	 -fx-background-color: #303138;
+}
+.button_4{
+	 -fx-text-fill: #303138;
+	  -fx-background-color: none;
+	 -fx-font-weight: bold;	
+}
+.button_4:hover{
+	 -fx-background-color: #16BF9F;
+}
+.button_3:hover{
+	 -fx-background-color: #16BF9F;
+}
+.tab{
+	
+	-fx-font-size: 12px;
+	-fx-font-family: monospace;
+    -fx-background-color: #16BF9F;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 161px;
+    -fx-cursor: hand;
+    -fx-border-radius: 2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 20,0,0,0);
+}
+
+.flag{
+	-fx-background-color: #169FBF;
+	-fx-background-radius: 20px;
+}
+
+.tab:hover{
+	 -fx-background-color: white;
+}
+
+.tab-header-background{
+	-fx-background-color: #303138;
+	-fx-alignment: center; 
+	
+}
+.scroll-pane{
+	-fx-base:  #303138;
+}
+
+.scroll-bar:horizontal{
+	-fx-base:  white;
+	-fx-background-color: #303138;
+}
+.scroll-bar:vertical{
+	-fx-base:  white;
+	-fx-background-color: #303138;
+	/*-fx-background-fills: red;*/
+}
+
